@@ -1,0 +1,19 @@
+class Solution {
+    public int solution(int[] A) {
+        
+
+    List<Integer> intList = new ArrayList<Integer>(A.  length);
+    for (int i : A)
+    {
+        intList.add(i);
+    }
+
+    for(int n=1; n<=100000;n++){
+        if(!intList.contains(n))
+        return n;
+            
+    }
+
+       return 0;
+    }
+}
