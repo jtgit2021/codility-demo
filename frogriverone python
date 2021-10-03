@@ -1,0 +1,13 @@
+def solution(X, A):
+    # write your code in Python 3.6
+    thisset={0}
+
+    n=0
+    for i in A:
+        thisset.add(i)
+
+        if(len(thisset)>X  ):
+            return n
+        n=n+1
+
+    return -1
