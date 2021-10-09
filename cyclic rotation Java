@@ -1,0 +1,27 @@
+class Solution {
+    public int[] solution(int[] A, int K) {
+        // write your code in Java SE 8
+                int sw = 0;
+        
+        if(A.length != 0)
+        sw = K%A.length;
+        
+        int res[];
+        res = new int[A.length];
+        
+        
+        for(int i = 0 ; i< A.length; i++){
+            if(i + sw <= A.length && A.length-sw+i<5 && A.length-sw+i>=0 && A.length>=5 ){
+            res[i] = A[A.length - sw +i];
+            }
+            else if(i-sw < 0){
+                res[i] = A[A.length - sw +i];
+            }
+            
+            else
+            res[i] = A[i-sw];
+        }
+
+        return res;
+    }
+}
